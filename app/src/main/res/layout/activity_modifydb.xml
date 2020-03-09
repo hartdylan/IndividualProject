@@ -9,7 +9,7 @@
         android:id="@+id/TitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DB Modifier Activity"
+        android:text="@string/db_modifier_activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,25 +20,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add quest"
+        android:text="@string/add_quest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
-    <Button
-        android:id="@+id/readQuest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Read Quest"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <EditText
         android:id="@+id/questName"
@@ -46,13 +33,14 @@
         android:layout_height="38dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Quest name"
+        android:hint="@string/quest_name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.177"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/addRew"
@@ -61,7 +49,7 @@
         android:layout_marginTop="96dp"
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
-        android:text="add"
+        android:text="@string/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toEndOf="@+id/objectivesText"
@@ -75,19 +63,21 @@
         android:layout_marginRight="14dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:hint="@string/enter_an_objective_here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/addObj"
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.437"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/objText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Objectives"
+        android:text="@string/objectives"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
@@ -101,13 +91,14 @@
         android:layout_height="38dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Trader name"
+        android:hint="@string/trader_name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246" />
+        app:layout_constraintVertical_bias="0.246"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/rewardsText"
@@ -117,13 +108,15 @@
         android:layout_marginRight="14dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:hint="@string/enter_a_reward_here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/addObj"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577" />
+        app:layout_constraintVertical_bias="0.577"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/addItem"
@@ -132,7 +125,7 @@
         android:layout_marginTop="188dp"
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
-        android:text="add"
+        android:text="@string/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toEndOf="@+id/objectivesText"
@@ -142,7 +135,7 @@
         android:id="@+id/rewText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rewards"
+        android:text="@string/rewards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.073"
@@ -156,7 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
-        android:text="add"
+        android:text="@string/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/objectivesText"
         app:layout_constraintTop_toTopOf="@+id/objectivesText" />
@@ -165,7 +158,7 @@
         android:id="@+id/qiText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quest Items"
+        android:text="@string/quest_items"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
@@ -181,13 +174,15 @@
         android:layout_marginRight="14dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:hint="@string/enter_an_item_here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/addObj"
         app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintVertical_bias="0.715"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/lvlReqText"
@@ -195,12 +190,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
-        android:hint="Lvl required"
+        android:hint="@string/lvl_required"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314" />
+        app:layout_constraintVertical_bias="0.314"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

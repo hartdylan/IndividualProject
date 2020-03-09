@@ -16,9 +16,8 @@ import java.util.ArrayList;
 
 public class ModifyDB extends AppCompatActivity implements View.OnClickListener {
 
-    Button addButton, readButton, addObj, addRew, addItem;
+    Button addButton, addObj, addRew, addItem;
     DatabaseReference quests = FirebaseDatabase.getInstance().getReference("quests");
-    ArrayList<Quest> questList;
     ArrayList<String> objList, rewList, itemList;
     EditText questName, traderName, lvl, objective, reward, item;
 
@@ -26,8 +25,8 @@ public class ModifyDB extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modifydb);
+        getSupportActionBar().setTitle("Modify database");
         addButton = findViewById(R.id.button);
-        readButton =findViewById(R.id.readQuest);
         addObj = findViewById(R.id.addObj);
         addRew = findViewById(R.id.addRew);
         addItem = findViewById(R.id.addItem);
@@ -49,10 +48,7 @@ public class ModifyDB extends AppCompatActivity implements View.OnClickListener 
             questName.getText().clear();
             traderName.getText().clear();
             lvl.getText().clear();
-        } else if (v == readButton) {
-            Toast.makeText(this, "Reading...", Toast.LENGTH_SHORT).show();
-//            test();
-        } else if (v == addObj) {
+        }  else if (v == addObj) {
             String obj = objective.getText().toString();
             objList.add(obj);
             objective.getText().clear();
@@ -67,7 +63,6 @@ public class ModifyDB extends AppCompatActivity implements View.OnClickListener 
 
     public void setOnClickListeners() {
         addButton.setOnClickListener(this);
-        readButton.setOnClickListener(this);
         addObj.setOnClickListener(this);
         addRew.setOnClickListener(this);
         addItem.setOnClickListener(this);

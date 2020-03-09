@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">IndividualProject</string>
+    <string name="submit">SUBMIT</string>
+    <string name="select_a_trader">Select a trader.</string>
+    <string name="select_a_quest">Select a quest.</string>
+    <string name="add">add</string>
+    <string name="add_quest">Add quest</string>
+    <string name="db_modifier_activity">DB Modifier Activity</string>
+    <string name="read_quest">Read Quest</string>
+    <string name="quest_name">Quest name</string>
+    <string name="objectives">Objectives</string>
+    <string name="trader_name">Trader name</string>
+    <string name="rewards">Rewards</string>
+    <string name="quest_items">Quest Items</string>
+    <string name="lvl_required">Lvl required</string>
+    <string name="enter_an_objective_here">Enter an objective here.</string>
+    <string name="enter_a_reward_here">Enter a reward here.</string>
+    <string name="enter_an_item_here">Enter an item here.</string>
+    <string name="escape_from_tarkov">Escape from Tarkov</string>
+    <string name="quest_and_item_guide">Quest and Item Guide</string>
+    <string name="quests">Quests</string>
+    <string name="about">About</string>
+    <string name="modify_db">Modify DB</string>
+    <string name="hideout_items">Hideout Items</string>
+    <string name="level_required">Level required</string>
+    <string name="quest_items_">Quest Items:</string>
 </resources>

@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("Main menu");
 
         questBtn = findViewById(R.id.questBtn);
         hideoutItemBtn = findViewById(R.id.hideoutItemBtn);
@@ -32,17 +33,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-            if (v == questBtn) {
-                Intent questIntent = new Intent(this, QuestActivity.class);
-                startActivity(questIntent);
-            }  else if (v == hideoutItemBtn) {
-                // go to hideout item activity
-            } else if (v == aboutBtn) {
-                // go to about / credits activity
-            } else if (v == modifyDBBtn) {
-                Intent modifyDBIntent = new Intent(this, ModifyDB.class);
-                startActivity(modifyDBIntent);
-            }
+        Intent intent = new Intent();
+        if (v == questBtn) {
+            intent = new Intent(this, QuestActivity.class);
+        } else if (v == hideoutItemBtn) {
+            intent = new Intent(this, HideoutActivity.class);
+        } else if (v == aboutBtn) {
+            intent = new Intent(this, AboutActivity.class);
+        } else if (v == modifyDBBtn) {
+            intent = new Intent(this, ModifyDB.class);
+        }
+        startActivity(intent);
     }
 
 }
