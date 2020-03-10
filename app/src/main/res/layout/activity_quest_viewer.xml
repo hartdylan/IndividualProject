@@ -4,76 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".QuestViewer">
-
-    <TextView
-        android:id="@+id/traderName"
-        android:layout_width="98dp"
-        android:layout_height="22dp"
-        android:gravity="left"
-        android:text="@string/trader_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/questName"
         android:layout_width="98dp"
         android:layout_height="22dp"
-        android:gravity="left"
+        android:gravity="right"
+        android:textColor="@color/white"
         android:text="@string/quest_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
-
-    <TextView
-        android:id="@+id/questNameText"
-        android:layout_width="124dp"
-        android:layout_height="22dp"
-        android:text="Debut"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
-
-    <TextView
-        android:id="@+id/lvlReqText"
-        android:layout_width="124dp"
-        android:layout_height="22dp"
-        android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.086" />
 
     <TextView
         android:id="@+id/lvlReq"
         android:layout_width="98dp"
         android:layout_height="22dp"
-        android:gravity="left"
+        android:gravity="right"
+
+        android:textColor="@color/white"
         android:text="@string/level_required"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.138" />
+
+    <TextView
+        android:id="@+id/traderName"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
+
+        android:textColor="@color/white"
+        android:gravity="right"
+        android:text="@string/trader_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/questNameText"
+        android:layout_width="124dp"
+        android:layout_height="22dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
 
     <TextView
         android:id="@+id/traderNameText"
         android:layout_width="124dp"
         android:layout_height="22dp"
-        android:text="Prapor"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.937"
@@ -83,88 +77,165 @@
 
     <ImageView
         android:id="@+id/traderImg"
-        android:layout_width="102dp"
-        android:layout_height="94dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.039"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
+        android:id="@+id/rewardsTextBox"
+        android:layout_width="375dp"
+        android:layout_height="148dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rewards"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
         android:id="@+id/questItemsTextBox"
         android:layout_width="375dp"
         android:layout_height="148dp"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rewards"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintTop_toBottomOf="@+id/questItems"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/objectivesTextBox"
+        android:layout_width="375dp"
+        android:layout_height="148dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/questItems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/objectives"
+        app:layout_constraintVertical_bias="0" />
+
+    <ListView
+        android:id="@+id/objectivesListView"
+        android:layout_width="380dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:dividerHeight="0.0sp"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="15dp"
+        android:scrollbarStyle="insideInset"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/questItems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/objectives"
+        app:layout_constraintVertical_bias="0.002" />
 
     <TextView
         android:id="@+id/questItems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/quest_items"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:textColor="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.454" />
 
-    <TextView
-        android:id="@+id/rewardsTextBox"
-        android:layout_width="375dp"
-        android:layout_height="148dp"
-        android:textSize="10sp"
+    <ListView
+        android:id="@+id/rewardsListView"
+        android:layout_width="380dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:dividerHeight="0.0sp"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="15dp"
+        android:scrollbarStyle="insideInset"
+        app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
+        app:layout_constraintTop_toBottomOf="@+id/rewards"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/objectivesTextBox"
-        android:layout_width="375dp"
-        android:layout_height="148dp"
-        android:text="- Objective 1"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ListView
+        android:id="@+id/questItemListView"
+        android:layout_width="380dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:dividerHeight="0.0sp"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="15dp"
+        android:scrollbarStyle="insideInset"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/rewards"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintTop_toBottomOf="@+id/questItems"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/rewards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rewards"
+        android:textSize="18sp"
+
+        android:textColor="#8BC34A"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759" />
+        app:layout_constraintVertical_bias="0.725" />
 
     <TextView
         android:id="@+id/objectives"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:text="@string/objectives"
-        app:layout_constraintBottom_toTopOf="@+id/objectivesTextBox"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:textColor="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/lvlReqText"
+        android:layout_width="124dp"
+        android:layout_height="22dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

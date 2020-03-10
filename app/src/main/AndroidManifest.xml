@@ -12,11 +12,11 @@
         <activity android:name=".HideoutActivity"
             android:parentActivityName=".MainActivity"></activity>
         <activity
-            android:name=".QuestActivity"
+            android:name=".QuestFinder"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QuestViewer"
-            android:parentActivityName=".QuestActivity" />
+            android:parentActivityName=".QuestFinder" />
         <activity
             android:name=".ModifyDB"
             android:parentActivityName=".MainActivity" />

@@ -50,7 +50,27 @@ public class Quest {
         return questItems;
     }
 
-    public String toString() {
-        return questName + " | " + trader + " | " + lvlRequirement;
+    public void setQuestName(String questName) {
+        this.questName = questName;
+    }
+
+    public void setTrader(String trader) {
+        this.trader = trader;
+    }
+
+    public void setLvlRequirement(int lvlRequirement) {
+        this.lvlRequirement = lvlRequirement;
+    }
+
+    public void setObjectives(ArrayList<String> objectives) {
+        this.objectives = objectives;
+    }
+
+    public void setRewards(ArrayList<String> rewards) {
+        this.rewards = rewards;
+    }
+
+    public void setQuestItems(ArrayList<String> questItems) {
+        this.questItems = questItems;
     }
 }

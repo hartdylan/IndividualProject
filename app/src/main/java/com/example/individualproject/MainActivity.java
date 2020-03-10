@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         Intent intent = new Intent();
         if (v == questBtn) {
-            intent = new Intent(this, QuestActivity.class);
+            intent = new Intent(this, QuestFinder.class);
         } else if (v == hideoutItemBtn) {
             intent = new Intent(this, HideoutActivity.class);
         } else if (v == aboutBtn) {

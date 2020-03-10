@@ -13,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class QuestActivity extends AppCompatActivity implements View.OnClickListener {
+public class QuestFinder extends AppCompatActivity implements View.OnClickListener {
 
     String[] traders = {"Prapor", "Therapist", "Skier", "Peacekeeper", "Mechanic", "Ragman", "Jaeger", "Fence"};
     Button submitButton;
@@ -32,11 +31,12 @@ public class QuestActivity extends AppCompatActivity implements View.OnClickList
     Adapter tAdapter, qAdapter;
     ArrayList<String> questNameList;
     ArrayList<Quest> questArrayList;
+    String currentTrader, currentQuest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quest);
+        setContentView(R.layout.activity_quest_finder);
         getSupportActionBar().setTitle("Quest finder");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         submitButton = findViewById(R.id.submitButton);
@@ -50,6 +50,8 @@ public class QuestActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         if (v == submitButton) {
             Intent questViewer = new Intent(this, QuestViewer.class);
+            questViewer.putExtra("trader", currentTrader);
+            questViewer.putExtra("quest", currentQuest);
             startActivity(questViewer);
         }
     }
@@ -61,9 +63,8 @@ public class QuestActivity extends AppCompatActivity implements View.OnClickList
         traderSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                getQuestsBasedOnSelection(traders[position]);
-//                Toast.makeText(QuestActivity.this, ""+questArrayList.size(), Toast.LENGTH_SHORT).show();
-//                setupQuestSpinner(questNameList);
+                getQuestsBasedOnTraderSelection(traders[position]);
+
             }
 
             @Override
@@ -73,17 +74,22 @@ public class QuestActivity extends AppCompatActivity implements View.OnClickList
         });
     }
 
-    public void getQuestsBasedOnSelection(String trader) {
-        questArrayList.clear();
-        DatabaseReference quests = FirebaseDatabase.getInstance().getReference("quests");
-        DatabaseReference traderRef = quests.child(trader);
-        traderRef.addValueEventListener(new ValueEventListener() {
+    public void getQuestsBasedOnTraderSelection(String trader) {
+        currentTrader = trader;
+        DatabaseReference quests = FirebaseDatabase.getInstance().getReference("quests").child(trader);
+        quests.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                questNameList.clear();
+                questArrayList.clear();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()) {
                     Quest newQuest = snapshot.getValue(Quest.class);
                     questArrayList.add(newQuest);
                 }
+                for(Quest q: questArrayList) {
+                    questNameList.add(q.getQuestName());
+                }
+                setupQuestSpinner(questNameList);
             }
 
             @Override
@@ -93,14 +99,14 @@ public class QuestActivity extends AppCompatActivity implements View.OnClickList
         });
     }
 
-    public void setupQuestSpinner(ArrayList<String> questArrayList) {
+    public void setupQuestSpinner(final ArrayList<String> questArrayList) {
         questSpinner = findViewById(R.id.questSpinner);
         qAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.traderlayout, questNameList);
         questSpinner.setAdapter((SpinnerAdapter) qAdapter);
         questSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                currentQuest = questArrayList.get(position);
             }
 
             @Override
