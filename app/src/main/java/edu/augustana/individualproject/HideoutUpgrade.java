@@ -1,4 +1,4 @@
-package com.example.individualproject;
+package edu.augustana.individualproject;
 
 import java.util.ArrayList;
 

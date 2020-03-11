@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".QuestViewer">
+    tools:context="edu.augustana.individualproject.QuestViewer">
 
     <TextView
         android:id="@+id/questName"

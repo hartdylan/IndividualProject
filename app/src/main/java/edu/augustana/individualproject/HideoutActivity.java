@@ -1,10 +1,10 @@
-package com.example.individualproject;
+package edu.augustana.individualproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
+import com.example.individualproject.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
