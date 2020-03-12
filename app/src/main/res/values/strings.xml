@@ -24,4 +24,5 @@
     <string name="hideout_items">Hideout Items</string>
     <string name="level_required">Level required</string>
     <string name="quest_items_">Quest Items:</string>
+    <string name="hideout_upgrade">Hideout upgrade:</string>
 </resources>

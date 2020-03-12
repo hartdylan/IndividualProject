@@ -8,6 +8,10 @@ public class HideoutUpgrade {
     ArrayList<String> items;
     ArrayList<String> requirements;
 
+    public HideoutUpgrade() {
+
+    }
+
     public HideoutUpgrade(String hideoutUpgradeName, ArrayList<String> items, ArrayList<String> requirements) {
         this.hideoutUpgradeName = hideoutUpgradeName;
         this.items = items;

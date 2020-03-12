@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.individualproject">
+    package="edu.augustana.individualproject" >
 
     <application
         android:allowBackup="true"
@@ -8,9 +8,12 @@
         android:label="Escape from Tarkov Quest and Item Guide"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="edu.augustana.individualproject.HideoutActivity"
-            android:parentActivityName="edu.augustana.individualproject.MainActivity"></activity>
+        android:theme="@style/AppTheme" >
+        <activity android:name="edu.augustana.individualproject.HideoutUpgradeViewer"
+            android:parentActivityName=".HideoutUpgradeFinder"/>
+        <activity
+            android:name="edu.augustana.individualproject.HideoutUpgradeFinder"
+            android:parentActivityName="edu.augustana.individualproject.MainActivity" />
         <activity
             android:name="edu.augustana.individualproject.QuestFinder"
             android:parentActivityName="edu.augustana.individualproject.MainActivity" />
@@ -21,9 +24,9 @@
             android:name="edu.augustana.individualproject.ModifyDB"
             android:parentActivityName="edu.augustana.individualproject.MainActivity" />
         <activity
-            android:name="edu.augustana.individualproject.AboutActivity"
+            android:name="edu.augustana.individualproject.About"
             android:parentActivityName="edu.augustana.individualproject.MainActivity" />
-        <activity android:name="edu.augustana.individualproject.MainActivity">
+        <activity android:name="edu.augustana.individualproject.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,13 +1,11 @@
 package edu.augustana.individualproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.individualproject.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,9 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v == questBtn) {
             intent = new Intent(this, QuestFinder.class);
         } else if (v == hideoutItemBtn) {
-            intent = new Intent(this, HideoutActivity.class);
+            intent = new Intent(this, HideoutUpgradeFinder.class);
         } else if (v == aboutBtn) {
-            intent = new Intent(this, AboutActivity.class);
+            intent = new Intent(this, About.class);
         } else if (v == modifyDBBtn) {
             intent = new Intent(this, ModifyDB.class);
         }

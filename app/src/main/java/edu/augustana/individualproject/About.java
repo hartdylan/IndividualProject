@@ -1,12 +1,10 @@
 package edu.augustana.individualproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-import com.example.individualproject.R;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class AboutActivity extends AppCompatActivity {
+public class About extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -40,10 +40,10 @@
         android:text="@string/about"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.93" />
 
     <Button
         android:id="@+id/questBtn"
@@ -53,10 +53,10 @@
         android:text="@string/quests"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.649" />
+        app:layout_constraintVertical_bias="0.650" />
 
     <Button
         android:id="@+id/hideoutItemBtn"
@@ -66,10 +66,10 @@
         android:text="@string/hideout_items"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.784" />
+        app:layout_constraintVertical_bias="0.790" />
 
     <Button
         android:id="@+id/modifyDBBtn"
