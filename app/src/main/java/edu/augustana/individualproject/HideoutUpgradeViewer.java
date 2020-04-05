@@ -67,7 +67,6 @@ public class HideoutUpgradeViewer extends AppCompatActivity {
     private void setupHideoutUpgradeInfo(HideoutUpgrade hideoutUpgrade) {
         Resources r = getResources();
         drawableId = r.getIdentifier(hideoutUpgrade.getHideoutUpgradeName().replaceAll("[^a-zA-Z]", "").toLowerCase(), "drawable", "com.example.individualproject");
-        Toast.makeText(this, hideoutUpgrade.getHideoutUpgradeName().replaceAll("[^a-zA-Z]", "").toLowerCase(), Toast.LENGTH_SHORT).show();
         img.setImageResource(drawableId);
         upgradeName.setText("Hideout upgrade: " + hideoutUpgrade.getHideoutUpgradeName());
         itemAd = new ArrayAdapter<String>(HideoutUpgradeViewer.this, R.layout.listlayout, hideoutUpgrade.getItems());
