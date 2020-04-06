@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,8 +18,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+/**
+ * This class receives data from the hideout upgrade finder class and displays the selected
+ * upgrade in scrollable text boxes.
+ */
 public class HideoutUpgradeViewer extends AppCompatActivity {
 
+    // FIELDS
     TextView upgradeName;
     ImageView img;
     ListView itemListView, requirementListView;
@@ -40,6 +44,9 @@ public class HideoutUpgradeViewer extends AppCompatActivity {
         getHideoutUpgradeInfo();
     }
 
+    /**
+     * Gather XML objects that will be referenced / used in this activity.
+     */
     private void initializeViewIDs() {
         img = findViewById(R.id.upgradeImg);
         upgradeName = findViewById(R.id.upgradeName);
@@ -47,6 +54,10 @@ public class HideoutUpgradeViewer extends AppCompatActivity {
         requirementListView = findViewById(R.id.requirementListView);
     }
 
+    /**
+     * This method is used to get data from the database in order to setup the proper info to
+     * display in the fields, image, and scrollable text boxes.
+     */
     private void getHideoutUpgradeInfo() {
         upgrade = getIntent().getStringExtra("upgrade");
         DatabaseReference upgradeRef = FirebaseDatabase.getInstance().getReference("hideout_upgrades").child(upgrade);
@@ -64,6 +75,10 @@ public class HideoutUpgradeViewer extends AppCompatActivity {
         });
     }
 
+    /**
+     * This method is used to set the display of the hideout upgrade.
+     * @param hideoutUpgrade - String - Hideout upgrade name
+     */
     private void setupHideoutUpgradeInfo(HideoutUpgrade hideoutUpgrade) {
         Resources r = getResources();
         drawableId = r.getIdentifier(hideoutUpgrade.getHideoutUpgradeName().replaceAll("[^a-zA-Z]", "").toLowerCase(), "drawable", "com.example.individualproject");

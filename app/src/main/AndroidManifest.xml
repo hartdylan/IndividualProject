@@ -21,9 +21,6 @@
             android:name="edu.augustana.individualproject.QuestViewer"
             android:parentActivityName="edu.augustana.individualproject.QuestFinder" />
         <activity
-            android:name="edu.augustana.individualproject.ModifyDB"
-            android:parentActivityName="edu.augustana.individualproject.MainActivity" />
-        <activity
             android:name="edu.augustana.individualproject.About"
             android:parentActivityName="edu.augustana.individualproject.MainActivity" />
         <activity android:name="edu.augustana.individualproject.MainActivity" >

@@ -4,6 +4,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * This class is used to handle the activity within the application that displays information
+ * about the application itself and the inspiration behind it. There is nothing really complicated
+ * about this code whatsoever.
+ */
+
 public class About extends AppCompatActivity {
 
     @Override

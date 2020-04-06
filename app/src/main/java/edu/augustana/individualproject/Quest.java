@@ -2,8 +2,13 @@ package edu.augustana.individualproject;
 
 import java.util.ArrayList;
 
+/**
+ * This class is used to handle the custom object type of Quest
+ */
+
 public class Quest {
 
+    // FIELDS
     private String questName;
     private String trader;
     private int lvlRequirement;
@@ -12,11 +17,23 @@ public class Quest {
     private ArrayList<String> questItems;
 
 
-
+    /**
+     * This is the no-arg constructor needed for using an ArrayList adapter and for reading
+     * data in JSON form from the Firebase Real-time Database.
+     */
     public Quest() {
 
     }
 
+    /**
+     * This constructor is used to handle
+     * @param questName - String - Name of the quest
+     * @param trader - String - Name of the trader
+     * @param lvlRequirement - int - Level required for quest unlock
+     * @param objectives - ArrayList<String> - String ArrayList of the objectives for the quest
+     * @param rewards - ArrayList<String> - String ArrayList of the rewards obtained for completing the quest
+     * @param questItems - ArrayList<String> - String ArrayList of the quest items required for the quest
+     */
     public Quest(String questName, String trader, int lvlRequirement, ArrayList<String> objectives, ArrayList<String> rewards, ArrayList<String> questItems) {
         this.questName = questName;
         this.trader = trader;
@@ -26,6 +43,8 @@ public class Quest {
         this.questItems = questItems;
     }
 
+
+    // GETTERS
     public String getQuestName() {
         return questName;
     }
@@ -48,29 +67,5 @@ public class Quest {
 
     public ArrayList<String> getQuestItems() {
         return questItems;
-    }
-
-    public void setQuestName(String questName) {
-        this.questName = questName;
-    }
-
-    public void setTrader(String trader) {
-        this.trader = trader;
-    }
-
-    public void setLvlRequirement(int lvlRequirement) {
-        this.lvlRequirement = lvlRequirement;
-    }
-
-    public void setObjectives(ArrayList<String> objectives) {
-        this.objectives = objectives;
-    }
-
-    public void setRewards(ArrayList<String> rewards) {
-        this.rewards = rewards;
-    }
-
-    public void setQuestItems(ArrayList<String> questItems) {
-        this.questItems = questItems;
     }
 }

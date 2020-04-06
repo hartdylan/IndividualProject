@@ -16,7 +16,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-
+/**
+ * This class is used to display the quest information to the user in the QuestViewer activity
+ */
 public class QuestViewer extends AppCompatActivity {
 
     TextView traderText, questText, lvlReqText;
@@ -37,6 +39,9 @@ public class QuestViewer extends AppCompatActivity {
         setupQuest();
     }
 
+    /**
+     * Get references to all of the XML objects that are to be used in the activity.
+     */
     public void initializeViewIDs() {
         traderImg = findViewById(R.id.traderImg);
         traderText = findViewById(R.id.traderNameText);
@@ -47,6 +52,10 @@ public class QuestViewer extends AppCompatActivity {
         rewListView = findViewById(R.id.rewardsListView);
     }
 
+    /**
+     * This method is used to get the proper data from the database for the select quest before sending the data to
+     * the setupListViews method.
+     */
     public void setupQuest() {
         trader = getIntent().getStringExtra("trader");
         quest = getIntent().getStringExtra("quest");
@@ -68,6 +77,10 @@ public class QuestViewer extends AppCompatActivity {
         });
     }
 
+    /**
+     * This method is used to populate the scrollable list views with the array list data from the quest object.
+     * @param q
+     */
     public void setupListViews(Quest q) {
         traderText.setText(q.getTrader());
         questText.setText(q.getQuestName());

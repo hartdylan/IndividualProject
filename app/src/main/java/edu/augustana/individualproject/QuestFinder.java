@@ -22,7 +22,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-
+/**
+ * This class is used to handle the activity for finding quests in Escape from Tarkov
+ * by using a spinner that has every possible choice for the trader and then once a trader
+ * is selected, the secondary spinner is updated with all possible quests for that trader
+ * exclusively.
+ */
 public class QuestFinder extends AppCompatActivity implements View.OnClickListener {
 
     String[] traders = {"Prapor", "Therapist", "Skier", "Peacekeeper", "Mechanic", "Ragman", "Jaeger", "Fence"};
@@ -46,6 +51,10 @@ public class QuestFinder extends AppCompatActivity implements View.OnClickListen
         setupTraderSpinner();
     }
 
+    /**
+     * On click to handle button pressing in this activity.
+     * @param v - Parameter to handle the XML objects within this XML layout.
+     */
     @Override
     public void onClick(View v) {
         if (v == submitButton) {
@@ -56,6 +65,10 @@ public class QuestFinder extends AppCompatActivity implements View.OnClickListen
         }
     }
 
+    /**
+     * This method is used to populate the spinner for all possible traders and sends the selected
+     * trader name to the getQuestsBasedOnTraderSelection method.
+     */
     public void setupTraderSpinner() {
         traderSpinner = findViewById(R.id.traderSpinner);
         tAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.traderlayout, traders);
@@ -74,6 +87,11 @@ public class QuestFinder extends AppCompatActivity implements View.OnClickListen
         });
     }
 
+    /**
+     * This method gathers data from the database based on the selected trader in order to send the arraylist
+     * of strings that are the names of all possible quests for the trader that was selected.
+     * @param trader - String - Trader name
+     */
     public void getQuestsBasedOnTraderSelection(String trader) {
         currentTrader = trader;
         DatabaseReference quests = FirebaseDatabase.getInstance().getReference("quests").child(trader);
@@ -99,6 +117,10 @@ public class QuestFinder extends AppCompatActivity implements View.OnClickListen
         });
     }
 
+    /**
+     * This method is used to populate the spinner for all possible quests and will wait for the user to hit
+     * submit to view the quest.
+     */
     public void setupQuestSpinner(final ArrayList<String> questArrayList) {
         questSpinner = findViewById(R.id.questSpinner);
         qAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.traderlayout, questNameList);

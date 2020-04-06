@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +21,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+/**
+ * This class is used to handle the activity for finding hideout upgrades in Escape from Tarkov
+ * by using a spinner that has every possible choice and passes data to the hideout upgrader viewer
+ * activity.
+ */
+
 public class HideoutUpgradeFinder extends AppCompatActivity implements View.OnClickListener {
 
+    // FIELD
     Button submitButton;
     Spinner hideoutSpinner;
     Adapter hideoutAd;
@@ -44,6 +50,10 @@ public class HideoutUpgradeFinder extends AppCompatActivity implements View.OnCl
         getHideoutUpgrades();
     }
 
+    /**
+     * On click to handle button pressing in this activity.
+     * @param v - Parameter to handle the XML objects within this XML layout.
+     */
     @Override
     public void onClick(View v) {
         if(v == submitButton) {
@@ -53,6 +63,10 @@ public class HideoutUpgradeFinder extends AppCompatActivity implements View.OnCl
         }
     }
 
+    /**
+     * This method is used to retain the selection by the user in the spinner before they click submit
+     * to view the upgrade.
+     */
     public void setupHideoutSpinner() {
         hideoutSpinner = findViewById(R.id.hideoutSpinner);
         hideoutAd = new ArrayAdapter<>(getApplicationContext(), R.layout.traderlayout, upgradeNames);
@@ -71,6 +85,10 @@ public class HideoutUpgradeFinder extends AppCompatActivity implements View.OnCl
 
     }
 
+    /**
+     * Gather data from the database in order to populate the spinner with the possible options for hideout
+     * upgrades that the user can select.
+     */
     public void getHideoutUpgrades() {
         DatabaseReference hideoutRef = FirebaseDatabase.getInstance().getReference("hideout_upgrades");
         hideoutRef.addValueEventListener(new ValueEventListener() {
