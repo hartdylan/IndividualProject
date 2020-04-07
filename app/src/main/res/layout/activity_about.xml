@@ -12,7 +12,7 @@
         android:layout_width="351dp"
         android:layout_height="136dp"
         android:gravity="center"
-        android:text="Escape from Tarkov Quest and Item guide was created by Dylan Hart for the CSC490 Senior Inquiry individual project. This app is meant to guide new players of Escape from Tarkov. Features that are included in this app are the ability to search quests by trader, quest items to be collected, and hideout items to collect for upgrading the players hideout."
+        android:text="Escape from Tarkov Quest and Item guide was created by Dylan Hart for the CSC490 Senior Inquiry individual project. This app is meant to guide new and existing players of Escape from Tarkov. Features that are included in this app are the ability to search quests by trader, provide information about quest and hideout items to be collected as well as what the requirements are to upgrade components of the players hideout."
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
